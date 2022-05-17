@@ -27,7 +27,7 @@ import com.karumi.dexter.listener.PermissionRequest;
 import com.karumi.dexter.listener.single.PermissionListener;
 
 public class CallFragment extends Fragment {
-    Button b1,b2,b3,b4,b5,b6,b7,b8,b9,b0,bplus,bhash;
+    Button b1,b2,b3,b4,b5,b6,b7,b8,b9,b0,bplus,bhash, bmae, bcasa, bmenos;
     ImageButton bcall,bclear;
     TextView tv;
     @Nullable
@@ -45,7 +45,10 @@ public class CallFragment extends Fragment {
         b9 = view.findViewById(R.id.b9);
         b0 = view.findViewById(R.id.b0);
         bplus = view.findViewById(R.id.bplus);
+        bmenos = view.findViewById(R.id.bmenos);
         bhash = view.findViewById(R.id.bhash);
+        bmae = view.findViewById(R.id.bmae);
+        bcasa = view.findViewById(R.id.bcasa);
         bcall = view.findViewById(R.id.bcall);
         bclear = view.findViewById(R.id.bclear);
 
@@ -67,6 +70,12 @@ public class CallFragment extends Fragment {
 
             }
         }).check();
+        bmenos.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                tv.setText(tv.getText().toString()+"-");
+            }
+        });
 
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
