@@ -1,4 +1,4 @@
-package com.example.hm1;
+package com.example.dialerapp;
 
 import org.junit.Test;
 
